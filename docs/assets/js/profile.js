@@ -1,5 +1,7 @@
-const renderImage = (url) => `<img src="${url}" alt="Profielfoto" />`;
-
+/**
+ * Sets the profile picture
+ * @param {string} src The source of the profile picture
+ */
 export const setProfile = (src) => {
   const container = document.getElementById("profilePicture");
   const img = document.createElement("img");

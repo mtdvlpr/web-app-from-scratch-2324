@@ -1,14 +1,19 @@
-[role=tablist] {
+/* Tabs */
+
+[role="tablist"] {
   display: none;
   margin-bottom: 16px;
 }
 
-button[aria-selected=true] {
+button[aria-selected="true"] {
   border-color: #646cff;
 }
 
 @media screen and (max-width: 500px) {
-  #profileInfoContainer, #stats, #habitats, #team {
+  #profileInfoContainer,
+  #stats,
+  #habitats,
+  #team {
     display: none;
   }
 
@@ -20,7 +25,7 @@ button[aria-selected=true] {
     animation: fade 1s ease-in-out;
   }
 
-  [role=tablist] {
+  [role="tablist"] {
     display: flex;
     gap: 8px;
     justify-content: center;

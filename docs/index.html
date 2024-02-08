@@ -32,6 +32,7 @@
   </head>
   <body>
     <div id="app">
+      <!-- Header with Pokemon logo -->
       <header>
         <div>
           <img src="assets/img/pokemon.svg" alt="Pokémon logo" />
@@ -96,8 +97,8 @@
           </article>
         </div>
 
-        <!-- Stats and habitats article -->
         <div id="statsHabitatsContainer">
+          <!-- Stats article -->
           <article id="stats">
             <h2>Stats</h2>
             <div id="stats-container">
@@ -108,6 +109,8 @@
               <div class="skeleton skeleton-text skeleton-text__body"></div>
             </div>
           </article>
+
+          <!-- Habitats article -->
           <article id="habitats">
             <h2>Habitats</h2>
             <div id="habitat-container">
@@ -125,8 +128,10 @@
         </section>
       </main>
     </div>
+
+    <!-- Pokemon card loader template -->
     <template id="card-template">
-      <article class="pokemon-card skeleton">
+      <article class="pokemon-card" data-skeleton>
         <h3><div class="skeleton skeleton-text"></div></h3>
         <img class="skeleton" alt="" height="200px" width="200px" />
         <div class="skeleton skeleton-text"></div>

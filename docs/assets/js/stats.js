@@ -1,3 +1,7 @@
+/**
+ * Fills the stats container with the stats data
+ * @param {{title: string; value: string}[]} stats The stats to display
+ */
 export const setStats = (stats) => {
   const container = document.getElementById("stats-container");
   container.innerHTML = "";

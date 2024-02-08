@@ -6,24 +6,6 @@ This project is an assignment for the course Web App From Scratch. The goal of t
 
 [View live demo](https://mtdvlpr.github.io/web-app-from-scratch-2324/)
 
-## Run project
-
-To run this project locally, you can clone the repository and use the following scripts:
-  
-  ```bash
-  # Install dependencies
-  $ yarn install
-
-  # Start development server
-  $ yarn dev
-
-  # Build for production
-  $ yarn build
-
-  # Preview production build
-  $ yarn preview
-  ```
-
 ## Sources
 
 - [Vite Setup](https://vitejs.dev/)
