@@ -15,10 +15,7 @@ const loadMyData = async () => {
     { title: "Name", value: data.name },
     { title: "Age", value: data.age },
     { title: "Strengths", value: data.strengths.join(", ") },
-    {
-      title: "Weaknesses",
-      value: data.weaknesses.join(", "),
-    },
+    { title: "Weaknesses", value: data.weaknesses.join(", ") },
     { title: "Description", value: data.description },
   ]);
   setStats(data.stats);
