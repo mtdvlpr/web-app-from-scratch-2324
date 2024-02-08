@@ -12,3 +12,8 @@
 ## 07-02-2024
 
 - Added a stats and habitats article
+
+## 08-02-2024
+
+- Removed Vite and replaced it with `<script type="importmap">`
+- Added skeleton loaders instead of loading spinners
