@@ -24,3 +24,4 @@
 ## 09-02-2024
 
 - Added pokedex section with pagination support
+- Added aria labels for skeleton loaders to indicate loading state to screen readers

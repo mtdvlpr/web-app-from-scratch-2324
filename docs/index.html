@@ -152,7 +152,12 @@
 
     <!-- Pokemon card loader template -->
     <template id="card-template">
-      <article class="pokemon-card" data-skeleton>
+      <article
+        class="pokemon-card"
+        aria-live="polite"
+        aria-busy="true"
+        data-skeleton
+      >
         <h3><div class="skeleton skeleton-text"></div></h3>
         <img class="skeleton" alt="" height="200px" width="200px" />
         <div class="skeleton skeleton-text"></div>
