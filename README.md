@@ -25,6 +25,8 @@ Another bug I encoured was when I tried to go to the very last page. The followi
 
 This was because I expected to get the same number of pokemon as the perPage variable that I use, but this is not the case for the last page. I fixed it by removing all remaining loading cards after all pokemon were loaded.
 
+![loader_fix](https://github.com/mtdvlpr/web-app-from-scratch-2324/assets/46671786/3c41db89-ad65-45cf-b215-15f91e4cec50)
+
 ## Sources
 
 - [Vite Setup](https://vitejs.dev/)
