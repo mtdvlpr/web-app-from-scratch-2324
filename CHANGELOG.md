@@ -20,3 +20,7 @@
 - Removed Vite and replaced it with `<script type="importmap">`
 - Added skeleton loaders instead of loading spinners for better UX
 - Moved some HTML from render functions to actual index.html file
+
+## 09-02-2024
+
+- Added pokedex section with pagination support
