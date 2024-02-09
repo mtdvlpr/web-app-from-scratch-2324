@@ -6,6 +6,20 @@ This project is an assignment for the course Web App From Scratch. The goal of t
 
 [View live demo](https://mtdvlpr.github.io/web-app-from-scratch-2324/)
 
+## Log
+
+### 09-02-2024
+
+I wanted to add pagination to the application, so I made a previous and next button to increase/decrease the current page. I added listeners that would update the disabled state of the buttons:
+![listeners](https://github.com/mtdvlpr/web-app-from-scratch-2324/assets/46671786/c0be195c-2947-4134-af8f-2179e447f5eb)
+
+This didn't work. The previous button kept being disabled...
+
+Eventually I figured out that I was only updating the previous button state when clicking the previous button and I should update both buttons when either button is clicked. I rewrote the code to the following:
+
+![fixed](https://github.com/mtdvlpr/web-app-from-scratch-2324/assets/46671786/c412f890-ac84-48e7-843e-be0303fd6fc7)
+
+
 ## Sources
 
 - [Vite Setup](https://vitejs.dev/)
