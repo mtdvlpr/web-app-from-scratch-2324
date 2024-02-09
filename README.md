@@ -30,6 +30,7 @@ This was because I expected to get the same number of pokemon as the perPage var
 ## Sources
 
 - [Vite Setup](https://vitejs.dev/)
+- [PokeAPI](https://pokeapi.co/)
 - [Loading Indicator](https://loading.io/css/)
 - [Accessible tabs](https://www.w3.org/WAI/ARIA/apg/patterns/tabs/examples/tabs-manual/)
 - [Animation](https://erikmartinjordan.com/display-none-display-block)
