@@ -22,3 +22,9 @@
 - Streaming service
 - kies je profiel/persoon
 - Je eigen top 10
+
+### Drafts
+
+![draft_site](https://github.com/mtdvlpr/web-app-from-scratch-2324/assets/46671786/917da288-13a5-4e1c-9a8b-f0ba472b8489)
+
+
