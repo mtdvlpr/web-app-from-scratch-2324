@@ -3,7 +3,7 @@
 /* Import all styles */
 @import url("./header.css");
 @import url("./profileInfo.css");
-@import url("./team.css");
+@import url("./pokemon.css");
 @import url("./statsHabitats.css");
 @import url("./tabs.css");
 @import url("./skeleton.css");
@@ -67,7 +67,7 @@ button {
   transition: border-color 0.25s;
 }
 
-button:hover {
+button:not([disabled]):hover {
   border-color: #646cff;
 }
 

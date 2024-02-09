@@ -20,7 +20,9 @@
           "stats": "/web-app-from-scratch-2324/assets/js/stats.js",
           "habitats": "/web-app-from-scratch-2324/assets/js/habitats.js",
           "team": "/web-app-from-scratch-2324/assets/js/team.js",
-          "tabs": "/web-app-from-scratch-2324/assets/js/tabs.js"
+          "tabs": "/web-app-from-scratch-2324/assets/js/tabs.js",
+          "pokemon": "/web-app-from-scratch-2324/assets/js/pokemon.js",
+          "pokedex": "/web-app-from-scratch-2324/assets/js/pokedex.js"
         }
       }
     </script>
@@ -78,6 +80,15 @@
           >
             Team
           </button>
+          <button
+            id="tab-5"
+            type="button"
+            role="tab"
+            aria-selected="false"
+            aria-controls="pokedex"
+          >
+            Pokédex
+          </button>
         </div>
 
         <!-- Profile picture and info article -->
@@ -125,6 +136,16 @@
         <section id="team">
           <h2>My Team</h2>
           <div id="team-pokemon-box"></div>
+        </section>
+
+        <!-- Pokédex section with Pokemon articles -->
+        <section id="pokedex">
+          <h2>My Pokédex</h2>
+          <div id="pokedex-pagination">
+            <button id="pokedex-prev" disabled>Vorige</button>
+            <button id="pokedex-next">Volgende</button>
+          </div>
+          <div id="pokedex-box"></div>
         </section>
       </main>
     </div>

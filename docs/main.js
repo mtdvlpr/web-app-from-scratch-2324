@@ -6,8 +6,11 @@ import { setStats } from "stats";
 import { setHabitats } from "habitats";
 import { loadTeam } from "team";
 import { initTabs } from "tabs";
+import { initPokedex } from "pokedex";
 
-// Load my json data in the app
+/**
+ * Loads data from the API and loads in into the application
+ */
 const loadMyData = async () => {
   const data = await fetchMyData();
   setProfile(data.avatar);
@@ -23,5 +26,10 @@ const loadMyData = async () => {
 };
 
 loadMyData();
-loadTeam([1, 2, 3, 4, 5, 6]);
+loadTeam(
+  Array(6)
+    .fill()
+    .map(() => Math.floor(1025 * Math.random()))
+);
+initPokedex();
 initTabs();

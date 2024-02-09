@@ -13,14 +13,16 @@ button[aria-selected="true"] {
   #profileInfoContainer,
   #stats,
   #habitats,
-  #team {
+  #team,
+  #pokedex {
     display: none;
   }
 
   #profileInfoContainer.active-tab,
   #stats.active-tab,
   #habitats.active-tab,
-  #team.active-tab {
+  #team.active-tab,
+  #pokedex.active-tab {
     display: block;
     animation: fade 1s ease-in-out;
   }
