@@ -5,10 +5,10 @@
   "age": 23,
   "city": "Alkmaar",
   "hobbies": ["Movies", "Coding", "Basketball"],
-  "truthsAndLies": [],
-  "bio": "I'm an enthusiastic and passionate full-end developer.",
+  "truthsAndLies": ["This is true", "This is true", "This is a lie"],
+  "bio": "I'm an enthusiastic and passionate full-stack developer.",
   "favoritePokemon": "Bulbasaur",
-  "favoritePokemonAvatar": "https",
+  "favoritePokemonAvatar": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/1.png",
   "stats": [
     { "title": "HTML", "value": 100 },
     { "title": "CSS", "value": 70 },
