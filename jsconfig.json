@@ -1,5 +1,5 @@
 {
   "compilerOptions": {
-    "baseUrl": "./docs/assets/js/",
+    "baseUrl": "./src/assets/js/"
   }
 }

@@ -34,6 +34,6 @@ This was because I expected to get the same number of pokemon as the perPage var
 - [Loading Indicator](https://loading.io/css/)
 - [Accessible tabs](https://www.w3.org/WAI/ARIA/apg/patterns/tabs/examples/tabs-manual/)
 - [Animation](https://erikmartinjordan.com/display-none-display-block)
-- [Template tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template)
+- [Template tag](https://developer.mozilla.org/en-US/src/Web/HTML/Element/template)
 - [Skeleton loaders](https://www.freecodecamp.org/news/how-to-build-skeleton-screens-using-css-for-better-user-experience/)
 - [Number input](https://css-tricks.com/finger-friendly-numerical-inputs-with-inputmode/)
