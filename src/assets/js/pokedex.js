@@ -1,3 +1,5 @@
+"use strict";
+
 import { fetchPokemon } from "api";
 import { loadSinglePokemon, setLoadingPokemon } from "pokemon";
 

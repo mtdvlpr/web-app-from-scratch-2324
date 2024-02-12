@@ -1,3 +1,5 @@
+"use strict";
+
 /**
  * Changes the active tab and its content
  * @param {number} id The id of the tab to activate

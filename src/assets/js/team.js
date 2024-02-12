@@ -1,3 +1,5 @@
+"use strict";
+
 import { loadSinglePokemon, setLoadingPokemon } from "pokemon";
 
 /**

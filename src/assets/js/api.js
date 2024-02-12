@@ -1,10 +1,20 @@
 /**
- * Fetches local data from ./me.json
- * @returns {Promise<*>} The fetched data
+ * Fetches local data from ./info.json
+ * @returns {Promise<{
+ * firstName: string
+ * lastName: string
+ * avatar_url: string
+ * age: number
+ * bio: string
+ * stats: {title: string; value: number}[]
+ * strengths: string[]
+ * weaknesses: string[]
+ * habitats: {title: string; value: number}[]
+ * }>} The fetched data
  */
 export async function fetchMyData() {
   try {
-    const response = await fetch("./me.json");
+    const response = await fetch("./info.json");
     return await response.json();
   } catch (e) {
     console.error(e);

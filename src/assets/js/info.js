@@ -1,3 +1,5 @@
+"use strict";
+
 /**
  * Fills the info container with the info data
  * @param {{title: string; value: string}[]} info The info to display

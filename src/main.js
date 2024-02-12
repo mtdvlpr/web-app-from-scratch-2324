@@ -1,3 +1,5 @@
+"use strict";
+
 // JS assets
 import { fetchMyData } from "api";
 import { setInfo } from "info";
@@ -13,13 +15,13 @@ import { initPokedex } from "pokedex";
  */
 const loadMyData = async () => {
   const data = await fetchMyData();
-  setProfile(data.avatar);
+  setProfile(data.avatar_url);
   setInfo([
-    { title: "Name", value: data.name },
+    { title: "Name", value: data.firstName },
     { title: "Age", value: data.age },
     { title: "Strengths", value: data.strengths.join(", ") },
     { title: "Weaknesses", value: data.weaknesses.join(", ") },
-    { title: "Description", value: data.description },
+    { title: "Description", value: data.bio },
   ]);
   setStats(data.stats);
   setHabitats(data.habitats);

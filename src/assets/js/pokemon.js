@@ -1,3 +1,5 @@
+"use strict";
+
 import { fetchSinglePokemon } from "api";
 
 /**

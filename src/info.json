@@ -1,10 +1,14 @@
 {
-  "avatar": "https://avatars.githubusercontent.com/u/46671786?v=4",
-  "name": "Manoah",
+  "firstName": "Manoah",
+  "lastName": "Tervoort",
+  "avatar_url": "https://avatars.githubusercontent.com/u/46671786?v=4",
   "age": 23,
+  "city": "Alkmaar",
+  "hobbies": ["Movies", "Coding", "Basketball"],
+  "truthsAndLies": [],
+  "bio": "I'm an enthusiastic and passionate full-end developer.",
   "favoritePokemon": "Bulbasaur",
   "favoritePokemonAvatar": "https",
-  "description": "I'm an enthusiastic and passionate full-end developer.",
   "stats": [
     { "title": "HTML", "value": 100 },
     { "title": "CSS", "value": 70 },
@@ -12,10 +16,7 @@
     { "title": "Design", "value": 60 },
     { "title": "Git", "value": 90 }
   ],
-  "strengths": [
-    "problem-solving",
-    "adaptability"
-  ],
+  "strengths": ["problem-solving", "adaptability"],
   "weaknesses": ["procrastination", "perfectionism"],
   "habitats": [
     { "title": "Home", "value": "Alkmaar" },

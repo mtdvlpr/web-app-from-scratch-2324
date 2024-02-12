@@ -1,3 +1,5 @@
+"use strict";
+
 /**
  * Parses the value of a habitat, returning a link element if it's a URL
  * @param {string} title The title of the habitat

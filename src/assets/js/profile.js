@@ -1,3 +1,5 @@
+"use strict";
+
 /**
  * Sets the profile picture
  * @param {string} src The source of the profile picture

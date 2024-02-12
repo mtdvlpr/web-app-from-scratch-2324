@@ -1,3 +1,5 @@
+"use strict";
+
 /**
  * Fills the stats container with the stats data
  * @param {{title: string; value: string}[]} stats The stats to display
