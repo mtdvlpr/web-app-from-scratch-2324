@@ -1,24 +1,44 @@
 import { fetchPokemon } from "api";
 import { loadSinglePokemon, setLoadingPokemon } from "pokemon";
 
-let CURRENT_PAGE = 1;
-let PER_PAGE = 10;
+// Default values
+const DEFAULT_PAGE = 1;
+const DEFAULT_PER_PAGE = 10;
+const MIN_PER_PAGE = 1;
+const MAX_PER_PAGE = 20;
+
+// State variables
+let CURRENT_PAGE = DEFAULT_PAGE;
+let PER_PAGE = DEFAULT_PER_PAGE;
 let HAS_NEXT_PAGE = true;
+
+/**
+ * Sets the query paramaters to new values
+ * @param {number} page The current page
+ * @param {number} perPage How many Pokemon to display per page
+ */
+const setQueryParams = (page = DEFAULT_PAGE, perPage = DEFAULT_PER_PAGE) => {
+  const url = new URL(window.location);
+  url.searchParams.set("page", page);
+  url.searchParams.set("per_page", perPage);
+  window.history.pushState(null, "", url.toString());
+};
 
 /**
  * Validates the new per page value and loads the pokedex if valid
  */
-const onPerPageChange = () => {
+const setPerPage = () => {
   const perPageInput = document.getElementById("pokedex-per-page-input");
   const value = perPageInput.valueAsNumber;
-  const isValid = !isNaN(value) && value >= 1 && value <= 20;
+  const isValid =
+    !isNaN(value) && value >= MIN_PER_PAGE && value <= MAX_PER_PAGE;
 
   const errorContainer = document.getElementById(
     "pokedex-per-page-input-error"
   );
   errorContainer.innerHTML = isValid
     ? ""
-    : "Value should be a number between 1 and 20.";
+    : `Value should be a number between ${MIN_PER_PAGE} and ${MAX_PER_PAGE}.`;
 
   if (isValid) loadPokedex(1, value);
 };
@@ -41,10 +61,11 @@ const setPagination = (loading = false) => {
  * @param {number} page The page to load
  * @param {number} perPage How many pokemon to load
  */
-const loadPokedex = async (page = 1, perPage = 10) => {
+const loadPokedex = async (page = DEFAULT_PAGE, perPage = DEFAULT_PER_PAGE) => {
   CURRENT_PAGE = page;
   PER_PAGE = perPage;
   setPagination(true);
+  setQueryParams(page, perPage);
   setLoadingPokemon("pokedex-box", perPage);
   const result = await fetchPokemon(page, perPage);
   HAS_NEXT_PAGE = result.hasNext;
@@ -71,14 +92,19 @@ const loadPokedex = async (page = 1, perPage = 10) => {
  * Initializes the pokedex by fetching the first results and adding event listeners
  */
 export const initPokedex = () => {
-  loadPokedex();
+  const url = new URL(window.location);
+  CURRENT_PAGE = +(url.searchParams.get("page") || NaN);
+  PER_PAGE = +(url.searchParams.get("per_page") || NaN);
+  if (isNaN(CURRENT_PAGE)) CURRENT_PAGE = DEFAULT_PAGE;
+  if (isNaN(PER_PAGE)) PER_PAGE = DEFAULT_PER_PAGE;
+  loadPokedex(CURRENT_PAGE, PER_PAGE);
 
   const perPageInput = document.getElementById("pokedex-per-page-input");
   const prevButton = document.getElementById("pokedex-prev");
   const nextButton = document.getElementById("pokedex-next");
 
-  perPageInput.value = "10";
-  perPageInput.addEventListener("change", onPerPageChange);
+  perPageInput.value = PER_PAGE;
+  perPageInput.addEventListener("change", setPerPage);
 
   prevButton.addEventListener("click", () => {
     if (CURRENT_PAGE > 1) loadPokedex(CURRENT_PAGE - 1, PER_PAGE);

@@ -6,7 +6,7 @@ export const setProfile = (src) => {
   const container = document.getElementById("profilePicture");
   const img = document.createElement("img");
   img.src = src;
-  img.alt = "Profielfoto";
+  img.alt = "Profile Picture";
   container.innerHTML = "";
   container.appendChild(img);
 };
