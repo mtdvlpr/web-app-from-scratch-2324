@@ -1,0 +1,19 @@
+#pokedex-pagination {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+#pokedex-per-page {
+  display: flex;
+  flex-direction: column;
+  max-width: 200px;
+  gap: 4px;
+}
+
+#pokedex-per-page-input-error {
+  color: red;
+}

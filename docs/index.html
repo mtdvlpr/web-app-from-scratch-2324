@@ -142,8 +142,35 @@
         <section id="pokedex">
           <h2>My Pokédex</h2>
           <div id="pokedex-pagination">
-            <button id="pokedex-prev" disabled>Vorige</button>
-            <button id="pokedex-next">Volgende</button>
+            <!-- Per page input -->
+            <div id="pokedex-per-page">
+              <label for="pokedex-per-page-input">Per page:</label>
+              <input
+                id="pokedex-per-page-input"
+                type="number"
+                name="perPage"
+                value="10"
+                inputmode="numeric"
+                min="1"
+                max="20"
+              />
+              <div id="pokedex-per-page-input-error"></div>
+            </div>
+            <!-- Previous/next buttons -->
+            <div id="pokedex-prev-next">
+              <button
+                id="pokedex-prev"
+                type="submit"
+                name="page"
+                value="0"
+                disabled
+              >
+                Vorige
+              </button>
+              <button id="pokedex-next" type="submit" name="page" value="2">
+                Volgende
+              </button>
+            </div>
           </div>
           <div id="pokedex-box"></div>
         </section>

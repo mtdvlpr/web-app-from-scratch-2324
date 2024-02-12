@@ -19,7 +19,7 @@ Eventually I figured out that I was only updating the previous button state when
 
 ![fixed](https://github.com/mtdvlpr/web-app-from-scratch-2324/assets/46671786/c412f890-ac84-48e7-843e-be0303fd6fc7)
 
-Another bug I encoured was when I tried to go to the very last page. The following was displayed:
+Another bug I encountered was when I tried to go to the very last page. The following was displayed:
 
 ![bug](https://github.com/mtdvlpr/web-app-from-scratch-2324/assets/46671786/39ddbdf2-8510-42e3-b39f-e20c149325a0)
 
@@ -36,3 +36,4 @@ This was because I expected to get the same number of pokemon as the perPage var
 - [Animation](https://erikmartinjordan.com/display-none-display-block)
 - [Template tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/template)
 - [Skeleton loaders](https://www.freecodecamp.org/news/how-to-build-skeleton-screens-using-css-for-better-user-experience/)
+- [Number input](https://css-tricks.com/finger-friendly-numerical-inputs-with-inputmode/)

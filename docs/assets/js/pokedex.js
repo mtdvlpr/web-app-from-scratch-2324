@@ -6,12 +6,32 @@ let PER_PAGE = 10;
 let HAS_NEXT_PAGE = true;
 
 /**
- * Sets the state of the pagination buttons
- * @param {boolean} loading Whether the pokemon are loading (disables buttons)
+ * Validates the new per page value and loads the pokedex if valid
+ */
+const onPerPageChange = () => {
+  const perPageInput = document.getElementById("pokedex-per-page-input");
+  const value = perPageInput.valueAsNumber;
+  const isValid = !isNaN(value) && value >= 1 && value <= 20;
+
+  const errorContainer = document.getElementById(
+    "pokedex-per-page-input-error"
+  );
+  errorContainer.innerHTML = isValid
+    ? ""
+    : "Value should be a number between 1 and 20.";
+
+  if (isValid) loadPokedex(1, value);
+};
+
+/**
+ * Sets the state of the pagination elements
+ * @param {boolean} loading Whether the pokemon are loading (disables elements)
  */
 const setPagination = (loading = false) => {
+  const perPageInput = document.getElementById("pokedex-per-page-input");
   const prevButton = document.getElementById("pokedex-prev");
   const nextButton = document.getElementById("pokedex-next");
+  perPageInput.toggleAttribute("disabled", loading);
   prevButton.toggleAttribute("disabled", loading || CURRENT_PAGE === 1);
   nextButton.toggleAttribute("disabled", loading || !HAS_NEXT_PAGE);
 };
@@ -53,8 +73,12 @@ const loadPokedex = async (page = 1, perPage = 10) => {
 export const initPokedex = () => {
   loadPokedex();
 
+  const perPageInput = document.getElementById("pokedex-per-page-input");
   const prevButton = document.getElementById("pokedex-prev");
   const nextButton = document.getElementById("pokedex-next");
+
+  perPageInput.value = "10";
+  perPageInput.addEventListener("change", onPerPageChange);
 
   prevButton.addEventListener("click", () => {
     if (CURRENT_PAGE > 1) loadPokedex(CURRENT_PAGE - 1, PER_PAGE);
