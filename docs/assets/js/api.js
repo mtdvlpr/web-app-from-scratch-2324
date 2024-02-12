@@ -1,6 +1,6 @@
 /**
  * Fetches local data from ./me.json
- * @returns {*} The fetched data
+ * @returns {Promise<*>} The fetched data
  */
 export async function fetchMyData() {
   try {
