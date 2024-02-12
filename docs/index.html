@@ -148,9 +148,8 @@
               <input
                 id="pokedex-per-page-input"
                 type="number"
-                name="perPage"
-                value="10"
                 inputmode="numeric"
+                value="10"
                 min="1"
                 max="20"
               />
@@ -158,18 +157,8 @@
             </div>
             <!-- Previous/next buttons -->
             <div id="pokedex-prev-next">
-              <button
-                id="pokedex-prev"
-                type="submit"
-                name="page"
-                value="0"
-                disabled
-              >
-                Vorige
-              </button>
-              <button id="pokedex-next" type="submit" name="page" value="2">
-                Volgende
-              </button>
+              <button id="pokedex-prev" disabled>Vorige</button>
+              <button id="pokedex-next">Volgende</button>
             </div>
           </div>
           <div id="pokedex-box"></div>
