@@ -8,7 +8,7 @@
 
 ## 06-02-2024
 
-- Created a first draft (see [IDEAS.md](./IDEAS.md)) of the application which fetches data from a JSON file and from an external API
+- Created a first draft (see [IDEAS.md](./IDEAS.md#drafts)) of the application which fetches data from a JSON file and from an external API
 - I decided to use Vite for easy bundling and optimizing the build output
 
 ## 07-02-2024
