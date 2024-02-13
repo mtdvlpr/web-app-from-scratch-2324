@@ -70,10 +70,12 @@ const loadPokedex = async (page = DEFAULT_PAGE, perPage = DEFAULT_PER_PAGE) => {
   setQueryParams(page, perPage);
   setLoadingPokemon("pokedex-box", perPage);
   const result = await fetchPokemon(page, perPage);
-  HAS_NEXT_PAGE = result.hasNext;
+  HAS_NEXT_PAGE = result?.hasNext;
+
+  if (!result) setPokedexError(() => loadPokedex(page, perPage));
 
   const promises = [];
-  result.results.forEach((id) =>
+  result?.results.forEach((id) =>
     promises.push(loadSinglePokemon("pokedex-box", id))
   );
 
@@ -88,6 +90,27 @@ const loadPokedex = async (page = DEFAULT_PAGE, perPage = DEFAULT_PER_PAGE) => {
     });
 
   setPagination();
+};
+
+/**
+ * Sets the pokedex to an error state
+ * @param {() => void} onRetry A function to retry loading the pokedex
+ */
+const setPokedexError = (onRetry) => {
+  const container = document.getElementById("pokedex-box");
+  const error = document.createElement("div");
+  error.style.marginTop = "1rem";
+  error.style.display = "flex";
+  error.style.flexDirection = "column";
+  error.style.gap = "0.5rem";
+  error.textContent = "Failed to load the pokedex";
+  if (onRetry) {
+    const button = document.createElement("button");
+    button.textContent = "Retry";
+    button.onclick = onRetry;
+    error.appendChild(button);
+  }
+  container.appendChild(error);
 };
 
 /**

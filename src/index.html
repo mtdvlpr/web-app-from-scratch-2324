@@ -22,7 +22,8 @@
           "team": "/web-app-from-scratch-2324/assets/js/team.js",
           "tabs": "/web-app-from-scratch-2324/assets/js/tabs.js",
           "pokemon": "/web-app-from-scratch-2324/assets/js/pokemon.js",
-          "pokedex": "/web-app-from-scratch-2324/assets/js/pokedex.js"
+          "pokedex": "/web-app-from-scratch-2324/assets/js/pokedex.js",
+          "loaders": "/web-app-from-scratch-2324/assets/js/loaders.js"
         }
       }
     </script>
@@ -94,16 +95,13 @@
         <!-- Profile picture and info article -->
         <div id="profileInfoContainer" class="active-tab">
           <div id="profilePicture">
-            <img class="skeleton" alt="" height="200px" width="200px" />
+            <img alt="" height="200px" width="200px" />
+            <noscript>Enable JavaScript to load above image.</noscript>
           </div>
           <article id="infoBox">
             <h2>Trainer Info</h2>
             <div id="infoContainer">
-              <div class="skeleton skeleton-text skeleton-text__body"></div>
-              <div class="skeleton skeleton-text skeleton-text__body"></div>
-              <div class="skeleton skeleton-text skeleton-text__body"></div>
-              <div class="skeleton skeleton-text skeleton-text__body"></div>
-              <div class="skeleton skeleton-text skeleton-text__body"></div>
+              <noscript>Enable JavaScript to load this section.</noscript>
             </div>
           </article>
         </div>
@@ -113,11 +111,7 @@
           <article id="stats">
             <h2>Stats</h2>
             <div id="stats-container">
-              <div class="skeleton skeleton-text skeleton-text__body"></div>
-              <div class="skeleton skeleton-text skeleton-text__body"></div>
-              <div class="skeleton skeleton-text skeleton-text__body"></div>
-              <div class="skeleton skeleton-text skeleton-text__body"></div>
-              <div class="skeleton skeleton-text skeleton-text__body"></div>
+              <noscript>Enable JavaScript to load this section.</noscript>
             </div>
           </article>
 
@@ -125,9 +119,7 @@
           <article id="habitats">
             <h2>Habitats</h2>
             <div id="habitat-container">
-              <div class="skeleton skeleton-text skeleton-text__body"></div>
-              <div class="skeleton skeleton-text skeleton-text__body"></div>
-              <div class="skeleton skeleton-text skeleton-text__body"></div>
+              <noscript>Enable JavaScript to load this section.</noscript>
             </div>
           </article>
         </div>
@@ -135,7 +127,9 @@
         <!-- Team section with Pokemon articles -->
         <section id="team">
           <h2>My Team</h2>
-          <div id="team-pokemon-box"></div>
+          <div id="team-pokemon-box">
+            <noscript>Enable JavaScript to load this section.</noscript>
+          </div>
         </section>
 
         <!-- Pokédex section with Pokemon articles -->
@@ -157,11 +151,13 @@
             </div>
             <!-- Previous/next buttons -->
             <div id="pokedex-prev-next">
-              <button id="pokedex-prev" disabled>Vorige</button>
-              <button id="pokedex-next">Volgende</button>
+              <button id="pokedex-prev" disabled>Previous</button>
+              <button id="pokedex-next">Next</button>
             </div>
           </div>
-          <div id="pokedex-box"></div>
+          <div id="pokedex-box">
+            <noscript>Enable JavaScript to load this section.</noscript>
+          </div>
         </section>
       </main>
     </div>

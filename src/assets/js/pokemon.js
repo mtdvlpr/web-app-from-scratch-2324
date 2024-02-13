@@ -7,23 +7,32 @@ import { fetchSinglePokemon } from "api";
  * @param {string} containerId The id of the container to load the pokemon into
  * @param {{
  * id: number
- * name: string
- * image: string
- * description: string
+ * name?: string
+ * image?: string
+ * description?: string
  * }} pokemon The pokemon to display
  */
 const setPokemon = (containerId, pokemon) => {
   const card = document.createElement("article");
   card.classList.add("pokemon-card");
-  card.appendChild(document.createElement("h3")).textContent = pokemon.name;
+  card.appendChild(document.createElement("h3")).textContent =
+    pokemon.name ?? `Pokemon #${pokemon.id}`;
 
   const img = document.createElement("img");
   img.src = pokemon.image;
-  img.alt = pokemon.name;
+  img.alt = pokemon.name ?? `Could not load image`;
   card.appendChild(img);
 
   card.appendChild(document.createElement("p")).textContent =
-    pokemon.description;
+    pokemon.description ?? "Could not load Pokémon";
+
+  if (!pokemon.name) {
+    card.setAttribute("data-pokemon-id", pokemon.id);
+    const button = document.createElement("button");
+    button.textContent = "Retry";
+    button.onclick = () => reloadSinglePokemon(containerId, pokemon.id);
+    card.appendChild(button);
+  }
 
   const container = document.getElementById(containerId);
   container.replaceChild(
@@ -39,7 +48,34 @@ const setPokemon = (containerId, pokemon) => {
  */
 export const loadSinglePokemon = async (containerId, pokemonId) => {
   const pokemon = await fetchSinglePokemon(pokemonId);
-  setPokemon(containerId, pokemon);
+  setPokemon(containerId, pokemon ?? { id: pokemonId });
+};
+
+/**
+ * Reloads a pokemon and sets the pokemon card
+ * @param {string} containerId The id of the container to load the pokemon into
+ * @param {number} pokemonId The id of the pokemon to load
+ */
+export const reloadSinglePokemon = async (containerId, pokemonId) => {
+  setSinglePokemonLoading(containerId, pokemonId);
+  const pokemon = await fetchSinglePokemon(pokemonId);
+  setPokemon(containerId, pokemon ?? { id: pokemonId });
+};
+
+/**
+ * Set a specific pokemon card to a loading state
+ * @param {string} containerId The id of the container to load the pokemon cards into
+ * @param {number} pokemonId Thepokemon to set to a loading state
+ */
+export const setSinglePokemonLoading = (containerId, pokemonId) => {
+  const container = document.getElementById(containerId);
+  const pokemonCard = container.querySelector(
+    `[data-pokemon-id="${pokemonId}"]`
+  );
+  container.replaceChild(
+    document.getElementById("card-template").content.cloneNode(true),
+    pokemonCard
+  );
 };
 
 /**

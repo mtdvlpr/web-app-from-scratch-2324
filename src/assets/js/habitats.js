@@ -1,5 +1,7 @@
 "use strict";
 
+import { TEXT_BODY_LOADER } from "loaders";
+
 /**
  * Parses the value of a habitat, returning a link element if it's a URL
  * @param {string} title The title of the habitat
@@ -27,4 +29,28 @@ export const setHabitats = (habitats) => {
   const container = document.getElementById("habitat-container");
   container.innerHTML = "";
   container.appendChild(list);
+};
+
+/**
+ * Sets the habitats container to loading state
+ */
+export const setHabitatsLoading = () => {
+  const container = document.getElementById("habitat-container");
+  container.innerHTML = TEXT_BODY_LOADER.repeat(3);
+};
+
+/**
+ * Sets the habitats container to error state
+ * @param {() => void} onRetry A function to retry the loading process
+ */
+export const setHabitatsError = (onRetry) => {
+  const container = document.getElementById("habitat-container");
+  container.innerHTML = "<p>Could not load habitats</p>";
+
+  if (onRetry) {
+    const button = document.createElement("button");
+    button.textContent = "Retry";
+    button.onclick = onRetry;
+    container.appendChild(button);
+  }
 };

@@ -29,3 +29,7 @@
 ## 12-02-2024
 
 - Added a per page input so the user can decide how many Pokemon to load per page
+
+## 13-02-2024
+
+- Added error states to every part of the application
