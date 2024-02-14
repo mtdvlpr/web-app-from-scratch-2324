@@ -47,7 +47,7 @@ const loadMyData = async () => {
       { title: "Description", value: data.bio },
     ]);
     setStats(data.stats);
-    setHabitats(data.habitats);
+    setHabitats(data.habitat);
   } else {
     setErrorState(loadMyData);
   }

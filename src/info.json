@@ -18,7 +18,7 @@
   ],
   "strengths": ["problem-solving", "adaptability"],
   "weaknesses": ["procrastination", "perfectionism"],
-  "habitats": [
+  "habitat": [
     { "title": "Home", "value": "Alkmaar" },
     { "title": "GitHub", "value": "https://github.com/mtdvlpr" },
     { "title": "LinkedIn", "value": "https://www.linkedin.com/in/manoaht/" }

@@ -9,7 +9,7 @@
  * stats: {title: string; value: number}[]
  * strengths: string[]
  * weaknesses: string[]
- * habitats: {title: string; value: number}[]
+ * habitat: {title: string; value: number}[]
  * }>} The fetched data
  */
 export async function fetchMyData() {
