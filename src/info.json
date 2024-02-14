@@ -7,8 +7,8 @@
   "hobbies": ["Movies", "Coding", "Basketball"],
   "truthsAndLies": ["This is true", "This is true", "This is a lie"],
   "bio": "I'm an enthusiastic and passionate full-stack developer.",
-  "favoritePokemon": "Bulbasaur",
-  "favoritePokemonAvatar": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/1.png",
+  "favoritePokemon": "Squirtle",
+  "favoritePokemonAvatar": "https://vignette.wikia.nocookie.net/pokemontowerdefensethree/images/f/f3/Squirtle.jpg/revision/latest",
   "stats": [
     { "title": "HTML", "value": 100 },
     { "title": "CSS", "value": 70 },
