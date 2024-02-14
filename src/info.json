@@ -22,6 +22,10 @@
   "habitat": [
     { "title": "Home", "value": "Alkmaar" },
     { "title": "GitHub", "value": "https://github.com/mtdvlpr" },
-    { "title": "LinkedIn", "value": "https://www.linkedin.com/in/manoaht/" }
+    { "title": "LinkedIn", "value": "https://www.linkedin.com/in/manoaht/" },
+    {
+      "title": "Personal Page",
+      "value": "https://mtdvlpr.github.io/web-app-from-scratch-2324/"
+    }
   ]
 }
