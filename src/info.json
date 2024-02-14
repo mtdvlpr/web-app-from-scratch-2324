@@ -9,7 +9,7 @@
   "bio": "I'm an enthusiastic and passionate full-stack developer.",
   "favoritePokemon": "Squirtle",
   "favoritePokemonColor": "#85c5db",
-  "favoritePokemonAvatar": "https://www.pngarts.com/files/3/Squirtle-PNG-Transparent-Image.png",
+  "favoritePokemonAvatar": "https://mtdvlpr.github.io/web-app-from-scratch-2324/assets/img/squirtle.png",
   "stats": [
     { "title": "HTML", "value": 100 },
     { "title": "CSS", "value": 70 },
