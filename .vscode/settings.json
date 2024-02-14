@@ -17,5 +17,5 @@
   "typescript.tsdk": "node_modules/typescript/lib",
   "liveServer.settings.root": "/src",
   "liveServer.settings.mount": [["/web-app-from-scratch-2324/", "./src"]],
-  "cSpell.words": ["Avenir", "noreferrer", "pokedex", "Pokédex"]
+  "cSpell.words": ["Avenir", "noreferrer", "pokedex", "Pokédex", "Squirtle"]
 }
